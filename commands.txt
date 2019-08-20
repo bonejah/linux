@@ -1,0 +1,39 @@
+Commands Linux
+
+pwd: name of your current directory
+cd: change directory, example: cd name_directory, to go back cd ..
+/: directory root
+ls: list all content of current directory
+clear: clean the screen
+mkdir: create a new folder, example: mkdir name_folder
+echo: write a message on screen, example: echo Hello World! > hello_world.txt
+cat: command to read an file, example: cat name_file
+cp: copy a file to a specific folder
+mv: rename or move a file, example rename: mv file1.txt file2.txt, example mv: file.txt ../folder2/. 
+rm: delete a file or directory, example rm file.txt; example rm -rf name_folder
+touch: create a file, example: touch name_file
+
+---------------------------------------------------------------------------------------------------
+Permission on files:
+chmod 777 name_file: insert all permissions in this file 
+
+owner   group   all
+421	421	421
+rwx     rwx	rwx
+
+Change owner in a file: chown bruno:bruno name_file
+using recursive: chmod -R 777 *
+
+chmod +x: permission to execute script
+--------------------------------------------------------------------------------------------------
+
+&: execute a program in background: example firefox &
+top: view all process running
+kill -9: finish a process, example: kill -9 name_process
+sudo su: change terminal for root user
+apt-get install: install a program, example: sudo apt-get install name_program
+ 
+sudo shutdown -r now: restart the computer
+sudo shutdown -h now: turn off the computer
+exit: exit terminal 
+
