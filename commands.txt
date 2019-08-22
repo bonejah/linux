@@ -1,3 +1,21 @@
+Distros Linux
+
+Ubuntu: https://ubuntu.com/download/desktop
+Mint: https://linuxmint.com/download.php
+Arch Linux: https://www.archlinux.org/download/
+
+=====================================================================
+
+Folders
+
+bin: contains executables files
+boot: responsible for boot the system operational
+home: user directory
+var: contains logs files, crash, www (web server)
+
+
+=====================================================================
+
 Commands Linux
 
 pwd: name of your current directory
