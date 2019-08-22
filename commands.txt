@@ -12,7 +12,8 @@ bin: contains executables files
 boot: responsible for boot the system operational
 home: user directory
 var: contains logs files, crash, www (web server)
-
+tmp: temporary files
+root: data from user root
 
 =====================================================================
 
@@ -24,12 +25,18 @@ cd: change directory, example: cd name_directory, to go back cd ..
 ls: list all content of current directory
 clear: clean the screen
 mkdir: create a new folder, example: mkdir name_folder
+mkdir -p: create a folder structure, example: mkdir -p folder1/folder2/folder3
 echo: write a message on screen, example: echo Hello World! > hello_world.txt
-cat: command to read an file, example: cat name_file
+cat: command to read an file, example: cat name_filel
 cp: copy a file to a specific folder
+cp -r: copy all content to a specific folder, example: cp -r origin_folder destiny_folder
 mv: rename or move a file, example rename: mv file1.txt file2.txt, example mv: file.txt ../folder2/. 
+ren: rename a directory
 rm: delete a file or directory, example rm file.txt; example rm -rf name_folder
 touch: create a file, example: touch name_file
+man: manual, example: man touch, man clear
+> : directed this instruction for a exit, example pwd > file.txt
+>> : add this instruction for a file, example Hello World >> file.txt
 
 ---------------------------------------------------------------------------------------------------
 Permission on files:
