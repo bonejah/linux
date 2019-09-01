@@ -1,42 +1,108 @@
+
 Distros Linux
 
 Ubuntu: https://ubuntu.com/download/desktop
 Mint: https://linuxmint.com/download.php
 Arch Linux: https://www.archlinux.org/download/
-
-=====================================================================
-
-Folders
-
-bin: contains executables files
-boot: responsible for boot the system operational
-home: user directory
-var: contains logs files, crash, www (web server)
-tmp: temporary files
-root: data from user root
+RedHat: https://www.redhat.com/en
+CentOS: https://www.centos.org/
+Fedora: https://getfedora.org/
+Suse: https://www.suse.com/
 
 =====================================================================
 
 Commands Linux
 
+whoami: to see the current user
+
 pwd: name of your current directory
+
 cd: change directory, example: cd name_directory, to go back cd ..
+
 /: directory root
+
 ls: list all content of current directory
+ls -ltr: list all content in order
+
 clear: clean the screen
-mkdir: create a new folder, example: mkdir name_folder
+
+mkdir: create a new directory/folder, example: mkdir name_folder
 mkdir -p: create a folder structure, example: mkdir -p folder1/folder2/folder3
+
 echo: write a message on screen, example: echo Hello World! > hello_world.txt
+
 cat: command to read an file, example: cat name_filel
-cp: copy a file to a specific folder
+
+cp: create or copy a file to a specific folder
 cp -r: copy all content to a specific folder, example: cp -r origin_folder destiny_folder
+
 mv: rename or move a file, example rename: mv file1.txt file2.txt, example mv: file.txt ../folder2/. 
+
 ren: rename a directory
+
 rm: delete a file or directory, example rm file.txt; example rm -rf name_folder
-touch: create a file, example: touch name_file
+
+touch: create a file empty, example: touch name_file
+
 man: manual, example: man touch, man clear
+
 > : directed this instruction for a exit, example pwd > file.txt
 >> : add this instruction for a file, example Hello World >> file.txt
+
+ifconfig: to see ip machine
+
+passwd: change password user, ex: passwd userid
+
+find or locate: main commands used to find files/directorie, example find . -name "george.txt"
+
+wildcards: Is a character that can be used as a substitute for any of a class of characters in a search
+s:
+* - represents zero or more characters
+? - represents a single character
+[] - represents a range of characters
+\ - as an escape character
+^ - the beginning of the line
+$ - the end of the line
+example: abc{1..9}-xyz
+
+
+
+
+
+===================================================================
+
+File Syste Structured Description
+
+/bin: Linux commands
+/boot: Contains files that aren't used by the operating system, but by its bootloader
+/etc: Additional programs and data files
+/lib: C programming library directory
+/mnt: Mount directory, usually reserved for mounting filesystems
+/opt: Optional add-on applications
+/root: Root home directory. It is not same as /
+/sbin: System binaries
+/proc: Running process
+/tmp: Temporary directory
+/home: User directories
+/var: Directory for system logs
+/dev: Contains references to all the preripheral hardware
+/media: cdrom
+/run: Directory is the companion directoruy to /var/run 
+
+==================================================================
+
+File System Paths
+
+Absolute path: Always begin with a "/", this indicates that the path starts at the root directory. Ex.: cd /var/lo/samba
+
+Relative path: Not begin with a "/". It identifies a location relative to your current position. Ex.: cd /var  cd log cd samba:
+
+===================================================================
+Virtual-Box
+
+Host-only Adapter = Allows communication between your PC and the Virtual Machine
+Bridged Adapter = Allow communication between your PC and VM plus allos communication to the internet
+
 
 ---------------------------------------------------------------------------------------------------
 Permission on files:
