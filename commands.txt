@@ -28,6 +28,7 @@ clear: clean the screen
 
 mkdir: create a new directory/folder, example: mkdir name_folder
 mkdir -p: create a folder structure, example: mkdir -p folder1/folder2/folder3
+rmdir: remove a directory
 
 echo: write a message on screen, example: echo Hello World! > hello_world.txt
 
@@ -65,8 +66,44 @@ s:
 $ - the end of the line
 example: abc{1..9}-xyz
 
+pipes: Is used by the sheel to connect the ooutput of one command directly to the input of another command. 
+Example: 
+ls -ltr | more 
+ll | more
+ls -ltr | tail -1 
 
+&: execute a program in background: example firefox &
+top: view all process running
+kill -9: finish a process, example: kill -9 name_process
+sudo su: change terminal for root user
+apt-get install: install a program, example: sudo apt-get install name_program
 
+sudo shutdown -r now: restart the computer
+sudo shutdown -h now: turn off the computer
+exit: exit terminal
+
+Help commands:
+whatis name_command
+name_command --help
+man name_command
+
+cat: command to read a content a specific file
+more: command to see one page at a time, example more name_file
+less: command to see one page at a time and navigate using page up or page down
+head: command to see the head of file, example: head name_file or head -2 name-file
+tail: command to see the tail fo file, example: tail name_file or tail -100 name_file
+
+date: command to see the date of system operational system
+
+cut: show the first or more characters in a file, example: cut -c1 name_file, cut -c1-3 name_file
+awk: separate each column in a file, example: awk '{print $1}' name_file
+grep: search a text in a file, example: grep Hello name_file
+sort: show the file sorted, example: sort name_file, or sort -r name_file
+uniq: remove all duplicates in a file, example: uniq name_file
+wc: count lines in a file, example: wc name_file
+
+diff: compare two files line by line
+cmd: compare two files byte by byte
 
 
 ===================================================================
@@ -98,33 +135,42 @@ Absolute path: Always begin with a "/", this indicates that the path starts at t
 Relative path: Not begin with a "/". It identifies a location relative to your current position. Ex.: cd /var  cd log cd samba:
 
 ===================================================================
+
+Permission on files:
+
+There are 3 types of permissions: read (r), write (w), execute running a program (x)
+Each permission can be controlled at three levels: u (user), g (group) and o (other)
+421     421     421
+rwx     rwx     rwx
+
+chmod 777 name_file: insert all permissions in this file 
+chmod g-w jerry: remove write to file "jerry" for the  group 
+chmod a-r jerry: remove read to file "jerry" for the all (use, group and others)
+chdmod u+r jerry: add read to file "jerry" for the user: 
+chmod +x: permission to execute script owner   group   all
+chmod +x: permission to execute script
+chmod -R 777 *: using recursive
+
+chown bruno name_file: change owner file
+chgrp root name_file: change group file
+
+=================================================================
+
 Virtual-Box
 
 Host-only Adapter = Allows communication between your PC and the Virtual Machine
 Bridged Adapter = Allow communication between your PC and VM plus allos communication to the internet
 
 
----------------------------------------------------------------------------------------------------
-Permission on files:
-chmod 777 name_file: insert all permissions in this file 
+==================================================================
 
-owner   group   all
-421	421	421
-rwx     rwx	rwx
 
-Change owner in a file: chown bruno:bruno name_file
-using recursive: chmod -R 777 *
 
-chmod +x: permission to execute script
---------------------------------------------------------------------------------------------------
 
-&: execute a program in background: example firefox &
-top: view all process running
-kill -9: finish a process, example: kill -9 name_process
-sudo su: change terminal for root user
-apt-get install: install a program, example: sudo apt-get install name_program
+
+
  
-sudo shutdown -r now: restart the computer
-sudo shutdown -h now: turn off the computer
-exit: exit terminal 
+
+
+
 
