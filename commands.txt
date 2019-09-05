@@ -128,6 +128,10 @@ ethtool enp0s3
 
 yum: command to install/update/upgrade/remove packages and updates
 
+ftp: example ftp ftp.redhat.com
+
+tracerout: command to used to map the journey, example traceroute www.google.com
+netstat -rnv
 =================================================================
 
 User Account Management
